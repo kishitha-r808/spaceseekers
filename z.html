@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Seekers</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 1st Page */
+    .background-image-1 {
+      background-image: url("https://media.istockphoto.com/id/157639696/photo/purple-space-stars.jpg?s=612x612&w=0&k=20&c=fkLtGZxUS9UPlLJUTeGjvvURT0u-vtxvj5sAYbDNrH4=");
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .welcomehead {
+      font-size: 50px;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .first-page-paragraph {
+      font-size: 24px;
+      margin-top: 10px;
+      color: #f1f1f1;
+    }
+
+    .signup-btn {
+      background-color: #0d6efd;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      padding: 12px 30px;
+      font-size: 18px;
+      transition: background 0.3s ease;
+    }
+    .signup-btn:hover {
+      background-color: #0041b3;
+    }
+
+    /* 2nd Page */
+    .background-img-for-2ndpage {
+      background-image: url("https://images.unsplash.com/photo-1417577097439-425fb7dec05e?fm=jpg&q=60&w=3000");
+      background-size: cover;
+      background-attachment: fixed;
+      padding: 40px 20px;
+      color: white;
+      position: relative;
+    }
+    .background-img-for-2ndpage::before {
+      content: "";
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.7);
+    }
+    .background-img-for-2ndpage > .container-fluid {
+      position: relative;
+      z-index: 1;
+    }
+
+    .heading-sec {
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+      color: #00FFFF;
+      margin-bottom: 15px;
+    }
+
+    .intro-section {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #f1f1f1;
+    }
+
+    /* Topic Box */
+    .topic-box {
+      background: rgba(35, 43, 57, 0.85);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px;
+      min-width: 220px;
+      transition: transform 0.3s ease;
+    }
+    .topic-box:hover {
+      transform: translateY(-8px);
+    }
+    .topic-box button {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    /* Back button */
+    .back-button {
+      background-color: black;
+      border: none;
+      color: white;
+      border-radius: 25px;
+      padding: 12px 30px;
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
+    /* Modal style */
+    .modal-content {
+      border-radius: 12px;
+    }
+    .modal-body button {
+      width: 80%;
+      margin: 8px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Section -->
+  <div id="sectionhomepage">
+    <div class="background-image-1">
+      <h1 class="welcomehead">Welcome to Space Seekers</h1>
+      <button type="button" class="signup-btn" onclick="window.location.href='m.html'">Explore More</button>
+      <p class="first-page-paragraph">Discover our cosmic journey</p>
+    </div>
+  </div>
+
+  <!-- Second Section -->
+  <div id="sectionstellarstoriesintro" class="background-img-for-2ndpage">
+    <div class="container-fluid">
+      <h1 class="heading-sec">Introduction</h1>
+      <p class="intro-section">
+        From the Sun’s powerful winds to Earth’s magnetic shield, and stunning auroras to massive solar eruptions—discover the fascinating forces of our solar system. Dive in to learn more!
+        <br><br> <strong>List Of Topics:</strong>
+      </p>
+
+      <div class="row justify-content-center">
+
+        <!-- Solar Wind -->
+        <div class="topic-box col-12 col-sm-6 col-md-4">
+          Solar Wind
+          <button class="btn btn-info" data-toggle="modal" data-target="#solarWindModal">Let's Go</button>
+        </div>
+        <!-- Solar Storms -->
+        <div class="topic-box col-12 col-sm-6 col-md-4">
+          Solar Storms
+          <button class="btn btn-warning" data-toggle="modal" data-target="#solarStormModal">Let's Go</button>
+        </div>
+        <!-- Earth Magnetic Field -->
+        <div class="topic-box col-12 col-sm-6 col-md-4">
+          Earth Magnetic Field
+          <button class="btn btn-primary" data-toggle="modal" data-target="#EMFModal">Let's Go</button>
+        </div>
+        <!-- Aurora -->
+        <div class="topic-box col-12 col-sm-6 col-md-4">
+          Aurora
+          <button class="btn btn-success" data-toggle="modal" data-target="#auroraModal">Let's Go</button>
+        </div>
+        <!-- Sun Magnetic Field -->
+        <div class="topic-box col-12 col-sm-6 col-md-4">
+          Sun Magnetic Field
+          <button class="btn btn-purple btn-dark" data-toggle="modal" data-target="#SMFModal">Let's Go</button>
+        </div>
+        <!-- Coronal Holes -->
+        <div class="topic-box col-12 col-sm-6 col-md-4">
+          Coronal Holes
+          <button class="btn btn-danger" data-toggle="modal" data-target="#CHModal">Let's Go</button>
+        </div>
+        <!-- CME -->
+        <div class="topic-box col-12 col-sm-6 col-md-4">
+          Coronal Mass Ejections
+          <button class="btn btn-teal btn-info" data-toggle="modal" data-target="#CMEModal">Let's Go</button>
+        </div>
+      </div>
+
+      <!-- Back button -->
+      <div class="text-center">
+        <button class="back-button" onclick="display('sectionhomepage')">Back to Home</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals Section (example with Solar Wind) -->
+  <div class="modal fade" id="solarWindModal" tabindex="-1">
+    <div class="modal-dialog"><div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Solar Wind</h5>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      </div>
+      <div class="modal-body text-center">
+        <button class="btn btn-info" onclick="window.location.href='ki.html'">Information Section</button>
+        <button class="btn btn-success" onclick="window.location.href='s1.html'">Upload Story</button>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Same format for other modals -->
+  <div class="modal fade" id="solarStormModal" tabindex="-1"><div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5 class="modal-title">Solar Storms</h5>
+      <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button></div>
+    <div class="modal-body text-center">
+      <button class="btn btn-info" onclick="window.location.href='k1.html'">Information Section</button>
+      <button class="btn btn-success" onclick="window.location.href='s1.html'">Upload Story</button>
+    </div>
+  </div></div></div>
+
+  <!-- Add other modals like EMFModal, auroraModal, SMFModal, CHModal, CMEModal in same way with correct file names -->
+
+  <script src="https://d2clawv67efefq.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+</html>

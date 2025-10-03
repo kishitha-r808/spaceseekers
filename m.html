@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solar Topics</title>
+
+  <!-- Bootstrap & Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+    }
+
+    .background-img-for-2ndpage {
+      background: url("https://images.unsplash.com/photo-1417577097439-425fb7dec05e?fm=jpg&q=60&w=3000") center/cover no-repeat;
+      padding: 40px 15px;
+      min-height: 100vh;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    /* Dark overlay for readability */
+    .background-img-for-2ndpage::before {
+      content: "";
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.6);
+      z-index: 0; /* ensure overlay is behind content */
+    }
+
+    .container-fluid {
+      position: relative;
+      z-index: 1;
+    }
+
+    .heading-sec {
+      font-size: 48px;
+      font-weight: bold;
+      color: #00ffff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .intro-section {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #f1f1f1;
+    }
+
+    .topic-card {
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(35, 43, 57, 0.85);
+      transition: transform 0.3s ease-in-out;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-body p {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .btn {
+      margin: 5px 0;
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    /* ensure modals appear above overlay */
+    .modal {
+      z-index: 2000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-img-for-2ndpage">
+    <div class="container-fluid">
+      <h1 class="heading-sec">Introduction</h1>
+      <p class="intro-section">
+        From the Sun’s powerful winds to Earth’s magnetic shield, and stunning auroras to massive solar eruptions—discover the fascinating forces of our solar system. Dive in to learn more!
+      </p>
+
+      <div class="row">
+        <!-- Solar Wind -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card topic-card text-center p-3">
+            <div class="card-body w-100">
+              <p>Solar Wind</p>
+              <button class="btn btn-info" onclick="window.location.href='ki.html'"><i class="fa fa-book"></i> Information</button>
+              <button class="btn btn-primary" onclick="window.location.href='r.html'"><i class="fa fa-eye"></i> View Story</button>
+              <button class="btn btn-success" onclick="window.location.href='s1.html'"><i class="fa fa-upload"></i> Upload Story</button>
+            
+            </div>
+          </div>
+        </div>
+
+        <!-- Solar Storms -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card topic-card text-center p-3">
+            <div class="card-body w-100">
+              <p>Solar Storms</p>
+              <button class="btn btn-info" onclick="window.location.href='k1.html'"><i class="fa fa-book"></i> Information</button>
+              <button class="btn btn-primary" onclick="window.location.href='r1.html'"><i class="fa fa-eye"></i> View Story</button>
+              <button class="btn btn-success" onclick="window.location.href='s1.html'"><i class="fa fa-upload"></i> Upload Story</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earth Magnetic Field -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card topic-card text-center p-3">
+            <div class="card-body w-100">
+              <p>Earth Magnetic Field</p>
+              <button class="btn btn-info" onclick="window.location.href='k2.html'"><i class="fa fa-book"></i> Information</button>
+              <button class="btn btn-primary" onclick="window.location.href='r2.html'"><i class="fa fa-eye"></i> View Story</button>
+              <button class="btn btn-success" onclick="window.location.href='s1.html'"><i class="fa fa-upload"></i> Upload Story</button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Aurora -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card topic-card text-center p-3">
+            <div class="card-body w-100">
+              <p>Aurora</p>
+              <button class="btn btn-info" onclick="window.location.href='k3.html'"><i class="fa fa-book"></i> Information</button>
+              <button class="btn btn-primary" onclick="window.location.href='r3.html'"><i class="fa fa-eye"></i> View Story</button>
+              <button class="btn btn-success" onclick="window.location.href='s1.html'"><i class="fa fa-upload"></i> Upload Story</button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Sun Magnetic Field -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card topic-card text-center p-3">
+            <div class="card-body w-100">
+              <p>Sun Magnetic Field</p>
+              <button class="btn btn-info" onclick="window.location.href='k6.html'"><i class="fa fa-book"></i> Information</button>
+              <button class="btn btn-primary" onclick="window.location.href='r5.html'"><i class="fa fa-eye"></i> View Story</button>
+              <button class="btn btn-success" onclick="window.location.href='s1.html'"><i class="fa fa-upload"></i> Upload Story</button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Coronal Holes -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card topic-card text-center p-3">
+            <div class="card-body w-100">
+              <p>Coronal Holes</p>
+              <button class="btn btn-info" onclick="window.location.href='k4.html'"><i class="fa fa-book"></i> Information</button>
+              <button class="btn btn-primary" onclick="window.location.href='r1.html'"><i class="fa fa-eye"></i> View Story</button>
+              <button class="btn btn-success" onclick="window.location.href='s1.html'"><i class="fa fa-upload"></i> Upload Story</button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Coronal Mass Ejections -->
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card topic-card text-center p-3">
+            <div class="card-body w-100">
+              <p>Coronal Mass Ejections</p>
+              <button class="btn btn-info" onclick="window.location.href='k5.html'"><i class="fa fa-book"></i> Information</button>
+              <button class="btn btn-primary" onclick="window.location.href='r4.html'"><i class="fa fa-eye"></i> View Story</button>
+              <button class="btn btn-success" onclick="window.location.href='s1.html'"><i class="fa fa-upload"></i> Upload Story</button>
+          
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- end .row -->
+
+      <!-- ======= Modals (moved outside the row, keeps layout stable) ======= -->
+      <!-- Solar Wind Modal -->
+      <div class="modal fade" id="solarWindModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title">Solar Wind</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>The Solar Wind is a stream of charged particles released from the Sun’s upper atmosphere.</p>
+              <a href="ki.html" class="btn btn-info">Learn More</a>
+              <a href="s1.html" class="btn btn-success">Upload Story</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solar Storm Modal -->
+      <div class="modal fade" id="solarStormModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title">Solar Storms</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>Solar storms are disturbances on the Sun that can release large amounts of energy and particles.</p>
+              <a href="k1.html" class="btn btn-info">Learn More</a>
+              <a href="s1.html" class="btn btn-success">Upload Story</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Earth Mag Modal -->
+      <div class="modal fade" id="earthMagModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title">Earth Magnetic Field</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>The Earth’s magnetic field protects us from harmful solar radiation and cosmic rays.</p>
+              <a href="k2.html" class="btn btn-info">Learn More</a>
+              <a href="s1.html" class="btn btn-success">Upload Story</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aurora Modal -->
+      <div class="modal fade" id="auroraModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title">Aurora</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>Auroras are natural light displays caused by interactions between solar wind and Earth’s magnetosphere.</p>
+              <a href="k3.html" class="btn btn-info">Learn More</a>
+              <a href="s1.html" class="btn btn-success">Upload Story</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sun Mag Modal -->
+      <div class="modal fade" id="sunMagModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title">Sun Magnetic Field</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>The Sun’s magnetic field drives solar activity, sunspots, flares, and coronal mass ejections.</p>
+              <a href="k6.html" class="btn btn-info">Learn More</a>
+              <a href="s1.html" class="btn btn-success">Upload Story</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coronal Hole Modal -->
+      <div class="modal fade" id="coronalHoleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title">Coronal Holes</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>Coronal holes are regions of the Sun’s atmosphere where the magnetic field opens into space, releasing high-speed solar wind.</p>
+              <a href="k4.html" class="btn btn-info">Learn More</a>
+              <a href="s1.html" class="btn btn-success">Upload Story</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CME Modal -->
+      <div class="modal fade" id="cmeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content text-center">
+            <div class="modal-header">
+              <h5 class="modal-title">Coronal Mass Ejections</h5>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>Coronal Mass Ejections (CMEs) are huge explosions of plasma and magnetic field from the Sun’s corona.</p>
+              <a href="k5.html" class="btn btn-info">Learn More</a>
+              <a href="s1.html" class="btn btn-success">Upload Story</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end container-fluid -->
+  </div> <!-- end background -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

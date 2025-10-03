@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Strokes</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+    background: url("https://images-assets.nasa.gov/image/PIA22076/PIA22076~medium.jpg") center/cover no-repeat; 
+    text-align: center;
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  height 0.5s ease; 
+    text-align: center;
+    overflow: hidden;
+    position: fixed; 
+    top: 0;  
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    
+    }
+
+    
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      transition: font-size 0.5s ease;
+      margin: 0;
+      z-index: 1;
+    }
+
+
+
+   .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: calc(50vh + 50px) 20px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      z-index: 2;
+      position: relative;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    
+    .topic-text {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .topic-image { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 15px; 
+      margin-bottom: 20px; 
+    } 
+       
+    .topic-image img {
+      max-width: 220px; 
+      border-radius: 8px; 
+      width: 70%;
+      float: right;
+      margin: 0 15px 15px 0;
+    }
+
+    .list-image-container {
+      display: flex;
+      align-items: flex-start; 
+      gap: 120px; 
+    }
+
+    .side-image {
+      width: 40%; 
+      height: auto;
+    }
+
+    
+    @media (max-width: 768px) {
+      .topic-layout {
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Solar Storms</h1>
+  </header>
+
+    <div class="content"> 
+      <div class="topic-text">
+        <h2>What are Solar Storms?</h2>
+        <div class="topic-image">
+        <p>
+         A solar storm is basically an explosion of particles, energy, magnetic fields, 
+         and all sorts of material that the Sun hurls into space. 
+         The Sun has this really complex web of magnetic fields that get all twisted up as it spins — 
+         its equator moves faster than the poles. Usually, solar storms kick off when these tangled magnetic fields get so twisted 
+         and stretched that they snap and reconnect, which we call magnetic reconnection, and that’s when a ton of energy is released.<br>
+         These powerful eruptions can generate any of the following :<br>
+         1) a bright flash of light called a solar flare.<br>
+         2) a radiation storm, or flurry of solar particles propelled into space at high speeds.<br>
+         3) an enormous cloud of solar material, called a coronal mass ejection, that billows away from the Sun.
+        </p>
+        <img src="https://stereo-ssc.nascom.nasa.gov/beacon/soho_eit_284.jpg" >
+        </div>
+
+        <h3>Advantages of Solar Storms:</h3>
+        <ul>
+          <li>They create amazing auroras, known as the Northern and Southern Lights.</li>
+          <li>Scientists can use them to study solar activity and forecast space weather.</li>
+          <li>They give us useful data about Earth’s magnetic field and its effects on the atmosphere.</li>
+          <li>Researchers find them valuable for protecting satellites and power grids.</li>
+        </ul>
+
+        <h3>Disadvantages of Solar Storms</h3>
+        <div class="list-image-container">
+        <ul>
+          <li>They have the potential to disrupt satellite operations and communication systems.</li>
+          <li>Astronauts and high-altitude flights may face radiation risks.</li>
+          <li>GPS navigation signals can get thrown off.</li>
+          <li>There's also a chance they could harm spacecraft electronics and instruments.</li>
+        </ul>
+        <img src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002082/GSFC_20171208_Archive_e002082~small.jpg " class="side-image" >
+        </div>
+
+        <h3>Damages caused by Solar Storms:</h3>
+        <h4>Economical Damage:</h4>
+        <ul>
+          <li>Power grid failures can lead to blackouts, like damage to transformers.</li>
+          <li>Repairing and protecting electrical infrastructure incurs costs.</li>
+          <li>Financial losses arise from satellite outages that affect communications and TV.</li>
+        </ul>
+
+        <h4>Geographical Effects:</h4>
+        <ul>
+          <li>They can disturb Earth’s magnetosphere and ionosphere.</li>
+          <li>You might see auroras at unexpectedly low latitudes.</li>
+          <li>Radio communications can be disrupted, particularly in polar areas.</li>
+        </ul>
+
+        <h4>Historical Records:</h4>
+        <ul>
+          <li>Carrington Event (1859): A huge geomagnetic storm that caused major telegraph disruptions worldwide.</li>
+          <li>Quebec Blackout (1989): Triggered by a geomagnetic storm, it left millions without power.</li>
+          <li>Halloween Storms (2003): A series of solar storms that led to satellite damage, communication disruptions, and auroras visible much further south.</li>
+        </ul>
+      
+        
+        
+      
+      </div>
+   </div>
+  </div>
+   <script>
+    const header = document.querySelector("header");
+    const title = header.querySelector("h1");
+
+    window.addEventListener("scroll", () => {
+      const triggerPoint = 100; 
+
+      if (window.scrollY > triggerPoint) {
+        header.style.height = "150px";   
+        title.style.fontSize = "2rem";  
+      } else {
+        header.style.height = "50vh";    
+        title.style.fontSize = "3rem";   
+      }
+    });
+  </script>
+
+</body>
+</html>

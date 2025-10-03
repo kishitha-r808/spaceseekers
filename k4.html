@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coronal Holes</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+    background: url("https://images-assets.nasa.gov/image/PIA15379/PIA15379~small.jpg") center/cover no-repeat; 
+    text-align: center;
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  height 0.5s ease; 
+    text-align: center;
+    overflow: hidden;
+    position: fixed; 
+    top: 0;  
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    
+    }
+
+    
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      transition: font-size 0.5s ease;
+      margin: 0;
+      z-index: 1;
+    }
+
+
+
+   .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: calc(50vh + 50px) 20px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      z-index: 2;
+      position: relative;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    
+    .topic-text {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .topic-image { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 15px; 
+      margin-bottom: 20px; 
+    } 
+       
+    .topic-image img {
+      max-width: 220px; 
+      border-radius: 8px; 
+      width: 70%;
+      float: right;
+      margin: 0 15px 15px 0;
+    }
+
+    .list-image-container {
+      display: flex;
+      align-items: flex-start; 
+      gap: 120px; 
+    }
+
+    .side-image {
+      width: 40%; 
+      height: auto;
+    }
+
+    
+    @media (max-width: 768px) {
+      .topic-layout {
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Coronal Holes</h1>
+  </header>
+
+    <div class="content"> 
+      <div class="topic-text">
+        <h2>What are Coronal Holes?</h2>
+        <div class="topic-image">
+        <p>  Coronal holes are areas where the Sun's magnetic field is open and a source of streaming solar wind. 
+          Coronal holes are spots on the Sun's corona that look darker in ultraviolet and X-ray images. 
+          These areas have magnetic field lines that are open, which lets solar wind particles flow out into space more easily.
+           They're the primary source of those fast solar wind streams and can stick around anywhere from a few days
+            to several months, depending on how big they are and where they are located.
+
+        </p>
+        <img src="https://images-assets.nasa.gov/image/PIA22345/PIA22345~medium.jpg" >
+        </div>
+
+        <h3>Advantages of Coronal Holes:</h3>
+        <ul>
+          <li>They offer important insights for understanding the Sun’s magnetic field and solar wind.</li>
+          <li>They assist scientists in forecasting space weather occurrences.</li>
+          <li>Because they tend to last a while, they can give us a heads-up on fast solar wind streams.</li>
+          <li>They're helpful for studying how the Sun and Earth interact, plus how auroras form.</li>
+        </ul>
+
+        <h3>Disadvantages of Coronal Holes:</h3>
+        <div class="list-image-container">
+        <ul>
+          <li>They can lead to high-speed solar winds that may interfere with satellites and communications in space.</li>
+          <li>They raise radiation risks for astronauts and flights that go high up.</li>
+          <li>When fast solar wind meets Earth’s magnetosphere, it can cause geomagnetic storms.</li>
+          <li>It's tricky to predict how they’ll affect us long-term because they don’t show up in a regular pattern.</li>
+        </ul>
+        <img src="https://images-assets.nasa.gov/image/PIA17914/PIA17914~small.jpg" class="side-image" >
+        </div>
+
+        <h3>Damages caused by Coronal Holes:</h3>
+        <h4>Economical Damage:</h4>
+        <ul>
+          <li>There can be disruptions to power grids and satellite functions.</li>
+          <li>Industries relying on communication, broadcasting, and GPS might face losses.</li>
+        </ul>
+
+        <h4>Geographical Effects:</h4>
+        <ul>
+          <li>They can trigger auroras that are visible further south during strong geomagnetic storms.</li>
+          <li>They mess with ionospheric conditions, which can disturb radio signals.</li>
+        </ul>
+
+        <h4>Historical Records:</h4>
+        <ul>
+          <li>Notable geomagnetic storms tied to coronal holes have been recorded, including the detailed observations from Skylab in 1973.</li>
+          <li>The 2003 “Halloween Storms” had multiple disruptions linked to large coronal holes.</li>
+          <li>Recent satellite observations show that coronal holes are major contributors to recurring geomagnetic activity.</li>
+        </ul>
+      
+        
+        
+      
+      </div>
+   </div>
+  </div>
+   <script>
+    const header = document.querySelector("header");
+    const title = header.querySelector("h1");
+
+    window.addEventListener("scroll", () => {
+      const triggerPoint = 100; 
+
+      if (window.scrollY > triggerPoint) {
+        header.style.height = "150px";   
+        title.style.fontSize = "2rem";  
+      } else {
+        header.style.height = "50vh";    
+        title.style.fontSize = "3rem";   
+      }
+    });
+  </script>
+
+</body>
+</html>

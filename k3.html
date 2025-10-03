@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurora</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+    background: url("https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001655/GSFC_20171208_Archive_e001655~small.jpg") center/cover no-repeat; 
+    text-align: center;
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  height 0.5s ease; 
+    text-align: center;
+    overflow: hidden;
+    position: fixed; 
+    top: 0;  
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    
+    }
+
+    
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      transition: font-size 0.5s ease;
+      margin: 0;
+      z-index: 1;
+    }
+
+
+
+   .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: calc(50vh + 50px) 20px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      z-index: 2;
+      position: relative;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    
+    .topic-text {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .topic-image { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 15px; 
+      margin-bottom: 20px; 
+    } 
+       
+    .topic-image img {
+      max-width: 220px; 
+      border-radius: 8px; 
+      width: 70%;
+      float: right;
+      margin: 0 15px 15px 0;
+    }
+
+    .list-image-container {
+      display: flex;
+      align-items: flex-start; 
+      gap: 120px; 
+    }
+
+    .side-image {
+      width: 40%; 
+      height: auto;
+    }
+
+    
+    @media (max-width: 768px) {
+      .topic-layout {
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Aurora</h1>
+  </header>
+
+    <div class="content"> 
+      <div class="topic-text">
+        <h2>What are Auroras?</h2>
+        <div class="topic-image">
+        <p> Auroras, or the northern and southern lights, are stunning, colorful displays that light up the night sky.
+           They happen in a part of Earth's atmosphere known as the ionosphere, but their origins are tied to the Sun.
+            Sometimes, during big events called coronal mass ejections, the Sun blasts out charged particles that race 
+            through space.<br>
+            When there's a buildup of energy, the magnetic field lines can suddenly break, sending energetic particles down towards Earth’s poles. 
+            As these particles hit the atoms in the atmosphere, they make those atoms light up, which creates the beautiful auroras.
+            The various colors of auroras are created by different atoms and molecules in the atmosphere.<br>
+            There are two types of Auroras:<br>
+            Aurora Borealis: Seen in the Northern Hemisphere.<br>
+            Aurora Australis: Seen in the Southern Hemisphere.
+        </p>
+        <img src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000760/GSFC_20171208_Archive_e000760~medium.jpg" >
+        </div>
+
+        <h3>Advantages of Auroras:</h3>
+        <ul>
+          <li>They create stunning natural light shows that draw in tourists.</li>
+          <li>Scientists can study how solar wind interacts with Earth’s magnetosphere.</li>
+          <li>They serve as natural markers for solar activity and space weather.</li>
+          <li>They add to local culture and history with myths, legends, and traditions.</li>
+        </ul>
+
+        <h3>Disadvantages of Auroras:</h3>
+        <div class="list-image-container">
+        <ul>
+          <li>They are mostly seen near the poles, making them hard to spot for many people around the globe.</li>
+          <li>Intense auroras can signal solar storms, which may harm satellites and communication systems.</li>
+          <li>They can disrupt radio and GPS signals in regions close to the poles.</li>
+          <li>The high-altitude radiation during auroras might pose risks for aircraft and astronauts.</li>
+        </ul>
+        <img src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002108/GSFC_20171208_Archive_e002108~orig.jpg" class="side-image" >
+        </div>
+
+        <h3>Damages caused by Auroras:</h3>
+        <h4>Economical Damage:</h4>
+        <ul>
+          <li>They can significantly boost tourism in places like Norway, Iceland, Canada, and Finland.</li>
+          <li>However, strong auroras can disrupt satellites and navigation systems, leading to financial losses.</li>
+        </ul>
+
+        <h4>Geographical Effects:</h4>
+        <ul>
+          <li>Typically found in polar areas (auroral ovals).</li>
+          <li>When solar storms are intense, auroras might be visible at much lower latitudes than normal.</li>
+        </ul>
+
+        <h4>Historical Records:</h4>
+        <ul>
+          <li>Ancient societies noted auroras in their folklore, including Chinese, Norse, and Native American stories.</li>
+          <li>The Carrington Event in 1859 created auroras that could be seen as far south as the Caribbean.</li>
+          <li>In 2003, the powerful “Halloween Storms” led to strong auroras that disrupted satellites and were visible beyond polar areas.</li>
+        </ul>
+      
+        
+        
+      
+      </div>
+   </div>
+  </div>
+   <script>
+    const header = document.querySelector("header");
+    const title = header.querySelector("h1");
+
+    window.addEventListener("scroll", () => {
+      const triggerPoint = 100; 
+
+      if (window.scrollY > triggerPoint) {
+        header.style.height = "150px";   
+        title.style.fontSize = "2rem";  
+      } else {
+        header.style.height = "50vh";    
+        title.style.fontSize = "3rem";   
+      }
+    });
+  </script>
+
+</body>
+</html>

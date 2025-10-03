@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth Magnetic Field</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+    background: url("https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001111/GSFC_20171208_Archive_e001111~small.jpg") center/cover no-repeat; 
+    text-align: center;
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  height 0.5s ease; 
+    text-align: center;
+    overflow: hidden;
+    position: fixed; 
+    top: 0;  
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    
+    }
+
+    
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      transition: font-size 0.5s ease;
+      margin: 0;
+      z-index: 1;
+    }
+
+
+
+   .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: calc(50vh + 50px) 20px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      z-index: 2;
+      position: relative;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    
+    .topic-text {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .topic-image { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 15px; 
+      margin-bottom: 20px; 
+    } 
+       
+    .topic-image img {
+      max-width: 220px; 
+      border-radius: 8px; 
+      width: 70%;
+      float: right;
+      margin: 0 15px 15px 0;
+    }
+
+    .list-image-container {
+      display: flex;
+      align-items: flex-start; 
+      gap: 120px; 
+    }
+
+    .side-image {
+      width: 40%; 
+      height: auto;
+    }
+
+    
+    @media (max-width: 768px) {
+      .topic-layout {
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Earth Magnetic Field</h1>
+  </header>
+
+    <div class="content"> 
+      <div class="topic-text">
+        <h2>What is Earth Magnetic Field?</h2>
+        <div class="topic-image">
+        <p> The Earth's magnetic field is like an invisible shield created 
+          by the movement of molten iron and nickel in the planet's outer core.
+          It reaches out into space and creates the magnetosphere, acting as a shield for our planet 
+          against harmful solar radiation and charged particles coming from the Sun.
+          Earth's magnetic field looks a lot like a giant bar magnet.
+          If you think about it, the magnetic north pole is actually the south pole of Earth's magnet, which is kind of confusing.
+          That's why it attracts the north pole of a compass.
+          Plus, the Sun's solar wind really influences the shape of our planet's magnetic field.
+         
+        </p>
+        <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/08/Exploring-Earth_s-Magnetic-Fields-1280.jpg?w=1280&h=1656&fit=crop&crop=faces%2Cfocalpoint" >
+        </div>
+
+        <h3>Advantages of Earth Magnetic Field:</h3>
+        <ul>
+          <li>It protects our planet from harmful solar winds and cosmic radiation.</li>
+          <li>It helps sustain life by shielding the atmosphere from erosion.</li>
+          <li>It enables navigation with magnetic compasses.</li>
+          <li>It aids animals like birds, turtles, and whales in their migrations using geomagnetic cues.</li>
+        </ul>
+
+        <h3>Disadvantages of Earth Magnetic Field:</h3>
+        <div class="list-image-container">
+        <ul>
+          <li>The magnetic poles are constantly shifting, which can throw off navigation systems.</li>
+          <li>The strength of the magnetic field isn't uniform worldwide, leading to potential inaccuracies in navigation.</li>
+          <li>Magnetic storms, resulting from solar activity, can interfere with communication and power systems.</li>
+          <li>A magnetic reversal, or shift of the poles, could temporarily reduce the protection we have against solar radiation.</li>
+        </ul>
+        <img src="https://images-assets.nasa.gov/image/PIA16938/PIA16938~orig.jpg " class="side-image" >
+        </div>
+
+        <h3>Damages caused by Earth Magnetic Field:</h3>
+        <h4>Economical Damage:</h4>
+        <ul>
+          <li>It protects satellites and communication systems from damage caused by solar radiation—failures 
+            during solar disturbances can lead to significant financial losses.</li>
+          <li>It's crucial for navigation across shipping, aviation, and GPS-dependent industries.</li>
+        </ul>
+
+        <h4>Geographical Effects:</h4>
+        <ul>
+          <li>It creates beautiful auroras in polar regions through interactions with the solar wind.</li>
+          <li>It causes variations in magnetic declination, which is the difference between true geographic north 
+            and magnetic north.</li>
+          <li>It may also indirectly affect weather and atmospheric circulation through 
+            interactions between the magnetosphere and ionosphere.</li>
+        </ul>
+
+        <h4>Historical Records:</h4>
+        <ul>
+          <li>Signs of geomagnetic reversals are found in volcanic rocks, including magnetic stripes on ocean floors.</li>
+          <li>Ancient navigators relied on magnetic compasses guided by the Earth’s magnetic field.</li>
+          <li>Changes in the field's strength are recorded in archaeological samples, a study known as archaeomagnetism.</li>
+        </ul>
+      
+        
+        
+      
+      </div>
+   </div>
+  </div>
+   <script>
+    const header = document.querySelector("header");
+    const title = header.querySelector("h1");
+
+    window.addEventListener("scroll", () => {
+      const triggerPoint = 100; 
+
+      if (window.scrollY > triggerPoint) {
+        header.style.height = "150px";   
+        title.style.fontSize = "2rem";  
+      } else {
+        header.style.height = "50vh";    
+        title.style.fontSize = "3rem";   
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Wind</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+    background: url("https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000845/GSFC_20171208_Archive_e000845~medium.jpg") center/cover no-repeat; 
+    text-align: center;
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  height 0.5s ease; 
+    text-align: center;
+    overflow: hidden;
+    position: fixed; 
+    top: 0;  
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    
+    }
+
+    
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      transition: font-size 0.5s ease;
+      margin: 0;
+      z-index: 1;
+    }
+
+
+
+   .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: calc(50vh + 50px) 20px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      z-index: 2;
+      position: relative;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    
+    .topic-text {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .topic-image { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 15px; 
+      margin-bottom: 20px; 
+    } 
+       
+    .topic-image img {
+      max-width: 220px; 
+      border-radius: 8px; 
+      width: 70%;
+      float: right;
+      margin: 0 15px 15px 0;
+    }
+
+    .list-image-container {
+      display: flex;
+      align-items: flex-start; 
+      gap: 120px; 
+    }
+
+    .side-image {
+      width: 40%; 
+      height: auto;
+    }
+
+    
+    @media (max-width: 768px) {
+      .topic-layout {
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Solar wind</h1>
+  </header>
+
+    <div class="content"> 
+      <div class="topic-text">
+        <h2>What is Solar Wind?</h2>
+        <div class="topic-image">
+        <p>
+          The sun is blasting a barrage of charged particles (electrons, protons, and other ions) 
+          out into the solar system. We call this ongoing stream of material the solar wind. 
+          These materials are released from the upper atmosphere of the Sun, known as the corona. 
+          These particles zoom through space at speeds between 300 and 800 km/s, 
+          interacting with the magnetic fields and atmospheres of planets.
+        </p>
+        <img src="https://images-assets.nasa.gov/image/PIA00948/PIA00948~small.jpg" >
+        </div>
+
+        <h3>Advantages of Solar Wind</h3>
+        <ul>
+          <li>Helps create auroras (Northern & Southern Lights).</li>
+          <li>Shapes planetary magnetospheres.</li>
+          <li>Provides info about solar activity & space weather.</li>
+          <li>Potential for solar sail propulsion in space travel.</li>
+        </ul>
+
+        <h3>Disadvantages of Solar Wind</h3>
+        <div class="list-image-container">
+        <ul>
+          <li>Can disrupt satellites & communications.</li>
+          <li>Causes radiation hazards for astronauts.</li>
+          <li>Damages spacecraft electronics over time.</li>
+        </ul>
+        <img src="https://images-assets.nasa.gov/image/PIA19055/PIA19055~medium.jpg " class="side-image" >
+        </div>
+
+        <h3>Damages caused by Solar Wind:</h3>
+        <h4>Economical Damage:</h4>
+        <ul>
+          <li>Disruption of power grids (blackouts).</li>
+          <li>Loss of communication and GPS navigation signals.</li>
+          <li>Costly damage to satellites and spacecraft instruments.</li>
+        </ul>
+
+        <h4>Geographical Effects:</h4>
+        <ul>
+          <li>Strong solar storms can disturb Earth’s magnetosphere.</li>
+          <li>Auroras can appear in unusual geographical locations (closer to the equator than usual).</li>
+          <li>Changes in ionospheric conditions affecting radio signals.</li>
+        </ul>
+
+        <h4>Historical Records:</h4>
+        <ul>
+          <li>Carrington Event (1859): The most powerful solar storm recorded; disrupted telegraph systems worldwide.</li>
+          <li>Quebec Blackout (1989): Solar storm caused a 9-hour power outage affecting millions of people in Canada.</li>
+          <li>Past solar storms have been linked to communication failures and satellite damage.</li>
+        </ul>
+      
+        
+        
+      
+      </div>
+   </div>
+  </div>
+   <script>
+    const header = document.querySelector("header");
+    const title = header.querySelector("h1");
+
+    window.addEventListener("scroll", () => {
+      const triggerPoint = 100; 
+
+      if (window.scrollY > triggerPoint) {
+        header.style.height = "150px";   
+        title.style.fontSize = "2rem";  
+      } else {
+        header.style.height = "50vh";    
+        title.style.fontSize = "3rem";   
+      }
+    });
+  </script>
+
+</body>
+</html>

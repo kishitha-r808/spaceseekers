@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coronal Mass Ejection</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+    background: url("https://images-assets.nasa.gov/image/PIA22184/PIA22184~medium.jpg") center/cover no-repeat; 
+    text-align: center;
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:  height 0.5s ease; 
+    text-align: center;
+    overflow: hidden;
+    position: fixed; 
+    top: 0;  
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    
+    }
+
+    
+    header h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      transition: font-size 0.5s ease;
+      margin: 0;
+      z-index: 1;
+    }
+
+
+
+   .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: calc(50vh + 50px) 20px 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      z-index: 2;
+      position: relative;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    
+    .topic-text {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .topic-image { 
+      display: flex; 
+      align-items: flex-start; 
+      gap: 15px; 
+      margin-bottom: 20px; 
+    } 
+       
+    .topic-image img {
+      max-width: 220px; 
+      border-radius: 8px; 
+      width: 70%;
+      float: right;
+      margin: 0 15px 15px 0;
+    }
+
+    .list-image-container {
+      display: flex;
+      align-items: flex-start; 
+      gap: 120px; 
+    }
+
+    .side-image {
+      width: 40%; 
+      height: auto;
+    }
+
+    
+    @media (max-width: 768px) {
+      .topic-layout {
+        grid-template-columns: 1fr; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Coronal Mass Ejection </h1>
+  </header>
+
+    <div class="content"> 
+      <div class="topic-text">
+        <h2>What is a Coronal Mass Ejection?</h2>
+        <div class="topic-image">
+        <p> Coronal mass ejections, which we often call CMEs, are giant clouds of charged particles that 
+          the Sun shoots out into space at speeds exceeding a million miles per hour, usually right after a solar flare. 
+          These CMEs grow larger as they move through space, sometimes stretching millions of miles wide.When directed toward Earth, 
+          they can collide with the magnetosphere, causing strong geomagnetic storms.These giant clouds of speeding solar material can 
+          impact computers aboard spacecraft and expose astronauts to dangerous radiation.
+
+        </p>
+        <img src="https://images-assets.nasa.gov/image/cme-blow-out_18529951894_o/cme-blow-out_18529951894_o~small.jpg" >
+        </div>
+
+        <h3>Advantages of Coronal Mass Ejection:</h3>
+        <ul>
+          <li>They offer essential insights into the Sun's magnetic activity.</li>
+          <li>They enable scientists to enhance space weather predictions.</li>
+          <li>They provide opportunities to study plasma physics and how the Sun interacts with Earth.</li>
+          <li>When they reach our planet, they can create stunning auroras.</li>
+        </ul>
+
+        <h3>Disadvantages of Coronal Mass Ejection:</h3>
+        <div class="list-image-container">
+        <ul>
+          <li>Powerful CMEs can cause major disruptions to satellites, GPS, and communication systems.</li>
+          <li>They can be a radiation risk for astronauts and flights at high altitudes.</li>
+          <li>They may generate strong currents in power grids that can damage transformers and lead to blackouts.</li>
+          <li>They increase the risks associated with space exploration and industries that rely on satellites.</li>
+        </ul>
+        <img src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e002109/GSFC_20171208_Archive_e002109~medium.jpg" class="side-image" >
+        </div>
+
+        <h3>Damages caused by Coronal Mass Ejection:</h3>
+        <h4>Economical Damage:</h4>
+        <ul>
+          <li>There’s a risk of billion-dollar losses from satellite failures and power grid outages.</li>
+          <li>Industries like aviation, shipping, and communication can experience significant interruptions.</li>
+          <li>Repairs and protective measures for space technology can be quite expensive.</li>
+        </ul>
+
+        <h4>Geographical Effects:</h4>
+        <ul>
+          <li>They can cause auroras that are visible in places where they typically wouldn’t be.</li>
+          <li>They disturb ionospheric layers, which can result in radio blackouts and navigation issues.</li>
+          <li>They might temporarily distort or weaken Earth's magnetic field.</li>
+        </ul>
+
+        <h4>Historical Records:</h4>
+        <ul>
+          <li>July 2012 CME (Close Call): A huge coronal mass ejection took place but narrowly avoided hitting Earth, 
+            missing it by just a week's worth of orbit. Experts think if it had struck directly, 
+            it could have inflicted damages ranging from $2 to $3 trillion.</li>
+          <li>In May 1921, there was a significant geomagnetic storm, also known as the Railway Storm. 
+            A strong coronal mass ejection (CME) led to major phone and telegraph disruptions, 
+            and there were even fires at railway control stations caused by electrical surges.</li>
+        </ul>
+      
+        
+        
+      
+      </div>
+   </div>
+  </div>
+   <script>
+    const header = document.querySelector("header");
+    const title = header.querySelector("h1");
+
+    window.addEventListener("scroll", () => {
+      const triggerPoint = 100; 
+
+      if (window.scrollY > triggerPoint) {
+        header.style.height = "150px";   
+        title.style.fontSize = "2rem";  
+      } else {
+        header.style.height = "50vh";    
+        title.style.fontSize = "3rem";   
+      }
+    });
+  </script>
+
+</body>
+</html>
