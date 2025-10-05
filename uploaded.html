@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload Image</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+
+<div class="w-full max-w-xl bg-gray-800 rounded-2xl p-6 space-y-6">
+    <h1 class="text-2xl font-bold text-cyan-400 text-center">Upload Your Image</h1>
+
+    <input type="file" id="image-upload" accept="image/*" class="w-full mb-4">
+    <textarea id="weather-info" class="w-full p-3 rounded-lg bg-gray-700" rows="4" placeholder="Add your observations..."></textarea>
+    <button id="save-upload" class="w-full bg-green-500 py-3 rounded-lg hover:bg-green-600">Upload & Go Back</button>
+</div>
+
+<script>
+const imageUpload = document.getElementById('image-upload');
+const weatherInfo = document.getElementById('weather-info');
+let uploadedImageData = '';
+
+imageUpload.addEventListener('change', function(event){
+    const file = event.target.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(e){
+            uploadedImageData = e.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
+document.getElementById('save-upload').addEventListener('click', function(){
+    if(!uploadedImageData){
+        alert('Please select an image!');
+        return;
+    }
+
+    // Save in localStorage
+    let imagesArray = JSON.parse(localStorage.getItem('uploadedImages') || '[]');
+    let infoArray = JSON.parse(localStorage.getItem('uploadedInfo') || '[]');
+    imagesArray.push(uploadedImageData);
+    infoArray.push(weatherInfo.value);
+    localStorage.setItem('uploadedImages', JSON.stringify(imagesArray));
+    localStorage.setItem('uploadedInfo', JSON.stringify(infoArray));
+
+    alert('Upload successful! ✅');
+
+    // Redirect back to index.html
+    window.location.href = 's.html';
+});
+</script>
+
+</body>
+</html>
